@@ -5,13 +5,23 @@ class PlatformException(Exception):
 def linux_interaction():
     import sys
 
-    if "linux" not in sys.platform:
-        raise PlatformException("Function can only run on Linux systems.")
-    print("Doing Linux things.")
+    #if "linux" not in sys.platform:
+        #raise PlatformException("Function can only run on Linux systems.")
+    #print("Doing Linux things.")
 
-
+"""
 try:
     linux_interaction()
 except PlatformException as error:
     print(error)
     print("The linux_interaction() function wasn't executed.")
+"""
+
+# ...
+
+try:
+    linux_interaction()
+except RuntimeError as error:
+    print(error)
+else:
+    print("Doing even more Linux things.")
